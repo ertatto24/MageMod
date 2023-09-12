@@ -1,0 +1,27 @@
+{
+    "name": "devsarrollo/module-controllerpage",
+    "description": "Creación de un controlador básico que al llamar a una url se muestra una página determinada.",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "support": {
+        "email": "support@example.org",
+        "source": "https://github.com/ertatto24/MageMod"
+    },
+    "authors": [
+        {
+            "name": "Jose Manuel",
+            "email": "github@devsarrollo.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Devsarrollo\\ControllerPage\\": ""
+        }
+    }
+}
