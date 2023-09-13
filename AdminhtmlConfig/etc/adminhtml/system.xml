@@ -1,0 +1,246 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="pestana" translate="label" sortOrder="1">
+			<label>Pestaña</label>
+		</tab>
+		<section id="seccion" sortOrder="2" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>Sección</label>
+			<tab>pestana</tab>
+			<resource>Devsarrollo_AdminhtmlConfig::config_devsarrollo_adminhtmlconfig</resource>
+			<group id="grupo" sortOrder="3" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Grupo</label>
+				<field id="campo" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Campo</label>
+					<comment>Comentario</comment>
+				</field>
+				<field id="campo2" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label" canRestore="1">
+					<label>Campo</label>
+					<comment>Se puede restaurar</comment>
+				</field>
+				<field id="campo3" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Campo</label>
+					<tooltip>Tooltip de ejemplo</tooltip>
+					<comment>Campo con tooltip</comment>
+				</field>
+				<field id="campo4" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Campo</label>
+					<if_module_enable>Devsarrollo_AdminhtmlConfig</if_module_enable>
+					<comment>Campo que se muestra si el módulo indicado está habilitado</comment>
+				</field>
+				<field id="campo5" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Campo</label>
+					<depends>
+						<field id="seleccion">opcion3</field>
+					</depends>
+					<comment>Campo que se muestra si previamente otro campo tiene el valor indicado</comment>
+				</field>
+				<field id="seleccion" type="select" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Selección</label>
+					<comment>Selección con valores personalizados</comment>
+					<source_model>Devsarrollo\AdminhtmlConfig\Model\Config\Source\Seleccion</source_model>
+				</field>
+				<field id="seleccion2" type="select" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Selección</label>
+					<comment>Selección con valores de frecuencia</comment>
+					<source_model>Magento\AdminNotification\Model\Config\Source\Frequency</source_model>
+				</field>
+				<field id="seleccion3" type="select" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Selección</label>
+					<comment>Selección con valores de tiempo</comment>
+					<source_model>Magento\Catalog\Model\Config\Source\TimeFormat</source_model>
+				</field>
+				<field id="seleccion4" type="select" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Selección</label>
+					<comment>Selección con valores de frecuencia</comment>
+					<source_model>Magento\Cron\Model\Config\Source\Frequency</source_model>
+				</field>
+				<field id="seleccion5" type="select" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Selección</label>
+					<comment>Selección códigos idiomas 2 letras</comment>
+					<source_model>Magento\GoogleAdwords\Model\Config\Source\Language</source_model>
+				</field>
+				<field id="seleccion6" type="select" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Selección</label>
+					<comment>Selección códigos idioma xx_XX</comment>
+					<source_model>Magento\Config\Model\Config\Source\Locale</source_model>
+				</field>
+				<field id="seleccion7" type="select" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Selección</label>
+					<comment>Selección yes,no,specified</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesnocustom</source_model>
+				</field>
+				<field id="seleccion8" type="select" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Selección</label>
+					<comment>Selección enable/disable</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="textarea" type="textarea" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Textarea</label>
+					<comment>Textarea</comment>
+				</field>
+				<field id="multiselect" type="multiselect" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Multiselect</label>
+					<comment>Multiselect con tipos de productos</comment>
+					<source_model>Devsarrollo\AdminhtmlConfig\Model\Config\Source\Multiselect</source_model>
+				</field>
+				<field id="encriptado" type="obscure" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Encriptado</label>
+					<comment>Encriptado cifrado</comment>
+					<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+					<config_path>seccion/grupo/encriptado</config_path>
+				</field>
+				<field id="password" type="password" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Encriptado</label>
+					<comment>Encriptado sin cifrar</comment>
+				</field>
+				<field id="file" type="file" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Fichero</label>
+					<comment>Permite cargar un archivo para su procesamiento</comment>
+					<backend_model>Magento\Config\Model\Config\Backend\File</backend_model>
+					<base_url type="media">devsarrollo/adminhtmlconfig/</base_url>
+            		<upload_dir config="system" scope_info="1">ficheros</upload_dir>
+				</field>
+				<field id="note" type="note" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Nota</label>
+					<comment>Permite añadir una nota informativa a la página</comment>
+				</field>
+				<field id="time1" type="time" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Tiempo</label>
+					<comment>Control para establecer la hora mediante tres menús desplegables: hora, minuto y segundo</comment>
+				</field>
+				<field id="image" type="image" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Imagen</label>
+					<comment>Permite cargar una imagen</comment>
+					<backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+      				<base_url type="media">devsarrollo/adminhtmlconfig/</base_url>
+            		<upload_dir config="system" scope_info="1">imagenes</upload_dir>
+				</field>
+			</group>
+			<group id="grupo2" sortOrder="3" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Validaciones</label>
+				<field id="alphanumeric" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Alfanumérico</label>
+					<validate>alphanumeric</validate>
+					<comment>Sólo permite letras, números, espacios o guiones bajos</comment>
+				</field>
+				<field id="integer" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Entero</label>
+					<validate>integer</validate>
+					<comment>Permite número no decimal positivo o negativo</comment>
+				</field>
+				<field id="ipv4" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>IPv4</label>
+					<validate>ipv4</validate>
+					<comment>Permite una dirección IPv4 válida</comment>
+				</field>
+				<field id="ipv6" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>IPv6</label>
+					<validate>ipv6</validate>
+					<comment>Permite una dirección IPv6 válida</comment>
+				</field>
+				<field id="letters-only" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Caracteres</label>
+					<validate>letters-only</validate>
+					<comment>Sólo permite caracteres</comment>
+				</field>
+				<field id="letters-with-basic-punc" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Caracteres/puntuación</label>
+					<validate>letters-with-basic-punc</validate>
+					<comment>Sólo permite caracteres o puntuación</comment>
+				</field>
+				<field id="no-marginal-whitespace" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Espacios en blanco</label>
+					<validate>no-marginal-whitespace</validate>
+					<comment>No permite espacios en blanco al principio o al final del valor</comment>
+				</field>
+				<field id="no-whitespace" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Espacios en blanco</label>
+					<validate>no-whitespace</validate>
+					<comment>No admite espacios en blanco</comment>
+				</field>
+				<field id="required-entry" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Obligatorio</label>
+					<validate>required-entry</validate>
+					<comment>No permite valor vacío, el campo es obligatorio</comment>
+				</field>
+				<field id="time" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Tiempo</label>
+					<validate>time</validate>
+					<comment>Permite una hora válida en formato de 24 horas</comment>
+				</field>
+				<field id="time12h" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Tiempo</label>
+					<validate>time12h</validate>
+					<comment>Permite una hora válida en formato de 12 horas</comment>
+				</field>
+				<field id="validate-admin-password" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Password</label>
+					<validate>validate-admin-password</validate>
+					<comment>Permite 7 o más caracteres, tanto numéricos como alfabéticos</comment>
+				</field>
+				<field id="validate-alphanum-with-spacesme" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Alfanumérico/espacios</label>
+					<validate>validate-alphanum-with-spaces</validate>
+					<comment>Solo permite el uso de letras (a-z o A-Z), números (0-9) o espacios</comment>
+				</field>
+				<field id="validate-clean-url" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>URL</label>
+					<validate>validate-clean-url</validate>
+					<comment>Permite una dirección URL válida</comment>
+				</field>
+				<field id="validate-data" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Datos</label>
+					<validate>validate-data</validate>
+					<comment>Solo permite el uso de letras (a-z o A-Z), números (0-9) o guiones bajos (_).
+El primer carácter debe ser una letra</comment>
+				</field>
+				<field id="validate-date-au" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Fecha</label>
+					<validate>validate-date-au</validate>
+					<comment>Aplica el siguiente formato de fecha: dd/mm/aaaa</comment>
+				</field>
+				<field id="validate-email" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Email</label>
+					<validate>validate-email</validate>
+					<comment>Permite una dirección de correo electrónico válida</comment>
+				</field>
+				<field id="validate-no-empty" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Vacío</label>
+					<validate>validate-no-empty</validate>
+					<comment>No permite un valor vacío</comment>
+				</field>
+				<field id="validate-no-html-tags" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>HTML</label>
+					<validate>validate-no-html-tags</validate>
+					<comment>No permite el uso de etiquetas de HTML</comment>
+				</field>
+				<field id="validate-password" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Password</label>
+					<validate>validate-password</validate>
+					<comment>Permite 6 caracteres o más. Los espacios iniciales y finales se omitirán</comment>
+				</field>
+				<field id="validate-select" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Vacío</label>
+					<validate>validate-select</validate>
+					<comment>Exige que la opción seleccionada no tenga un null valor, valor de cadena de none o una longitud de cadena de 0</comment>
+				</field>
+				<field id="validate-street" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Dirección</label>
+					<validate>validate-street</validate>
+					<comment>Permite el uso de letras (a-z o A-Z), números (0-9), espacios y "#" únicamente</comment>
+				</field>
+				<field id="validate-url" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>URL</label>
+					<validate>validate-url</validate>
+					<comment>Permite una dirección URL válida</comment>
+				</field>
+				<field id="validate-xml-identifier" type="text" sortOrder="4" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>XML</label>
+					<validate>validate-xml-identifier</validate>
+					<comment>Permite un identificador XML válido</comment>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
