@@ -1,0 +1,18 @@
+<?php if($block->getData('campo')): ?>
+	<h2 class='campo'><?=__('Campo:')?> <?php echo $block->getData('campo'); ?></h2>
+<?php endif; ?>
+
+<?php if($block->getData('select')): ?>
+	<h2 class='select'><?=__('Select:')?><?php echo $block->getData('select'); ?></h2>
+<?php endif; ?>
+
+<?php if($block->getData('multiselect')): ?>
+	<h2 class='multiselect'><?=__('Multiselect:')?><?php echo $block->getData('multiselect'); ?></h2>
+<?php endif; ?>
+
+<h1><?=__('Campos')?></h1>
+<?php if($campos = $block->getData()): ?>
+	<?php foreach($campos as $k=>$v): ?>
+		<h2><?= $k ?>: <?= $v ?></h2>
+	<?php endforeach; ?>
+<?php endif; ?>

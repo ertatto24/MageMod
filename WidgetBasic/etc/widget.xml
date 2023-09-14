@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget id="devsarrollo_widgetbasic_widgetbasico" class="Devsarrollo\WidgetBasic\Block\Widget\WidgetBasico">
+		<label>widgetBasico</label>
+		<description>widgetBasico</description>
+		<parameters>
+			<parameter name="campo" xsi:type="text" visible="true" sort_order="10">
+				<label>campo</label>
+			</parameter>
+			<parameter name="select" xsi:type="select" visible="true" sort_order="10" source_model="Devsarrollo\WidgetBasic\Model\Config\Source\Widget">
+				<label>select</label>
+			</parameter>
+			<parameter name="multiselect" xsi:type="multiselect" visible="true" sort_order="10" source_model="Devsarrollo\WidgetBasic\Model\Config\Source\Widget">
+				<label>multiselect</label>
+			</parameter>
+		</parameters>
+	</widget>
+</widgets>
