@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/devsarrollo-api/conexion" method="GET">
+		<service class="Devsarrollo\API\Api\ConexionManagementInterface" method="getConexion"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/devsarrollo-api/conexion" method="POST">
+		<service class="Devsarrollo\API\Api\ConexionManagementInterface" method="postConexion"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/devsarrollo-api/conexion" method="PUT">
+		<service class="Devsarrollo\API\Api\ConexionManagementInterface" method="putConexion"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/devsarrollo-api/conexion" method="DELETE">
+		<service class="Devsarrollo\API\Api\ConexionManagementInterface" method="deleteConexion"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+</routes>
