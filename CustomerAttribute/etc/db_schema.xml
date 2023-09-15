@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="customer_entity">
+		<column name="cliente" nullable="true" xsi:type="varchar" comment="Cliente" length="24"/>
+		<column name="alta" nullable="true" xsi:type="datetime" comment="Alta" length="24"/>
+		<column name="penalizado" nullable="true" xsi:type="int" comment="Penalizado" length="24"/>
+		<column name="opciones" nullable="true" xsi:type="varchar" comment="Opciones" length="24"/>
+		<column name="sedes" nullable="true" xsi:type="int" comment="Sedes" length="24"/>
+	</table>
+</schema>
