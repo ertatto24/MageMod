@@ -18,3 +18,8 @@ Creación en el backoffice de un apartado para configurar el módulo.
 ### API
 Creación básica de API, con param = parametro como ejemplo.
 - URL/rest/V1/devsarrollo-api/conexion?param=parametro
+
+### Command
+Creación básica de un comando CLI incluyendo un parámetro.
+- bin/magento devsarrollo_command:proceso
+- bin/magento devsarrollo_command:proceso --parametro hola
