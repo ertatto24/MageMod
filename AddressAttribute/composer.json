@@ -1,0 +1,27 @@
+{
+    "name": "devsarrollo/module-addressattribute",
+    "description": "Descripcion",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "support": {
+        "email": "github@devsarrollo.com",
+        "source": "https://github.com/ertatto24/MageMod"
+    },
+    "authors": [
+        {
+            "name": "Jose Manuel",
+            "email": "github@devsarrollo.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Devsarrollo\\ControllerPage\\": ""
+        }
+    }
+}

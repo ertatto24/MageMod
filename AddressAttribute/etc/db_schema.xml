@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="quote_address">
+		<column name="atributo1" nullable="true" xsi:type="varchar" comment="Atributo1" length="20"/>
+	</table>
+	<table name="sales_order_address">
+		<column name="atributo1" nullable="true" xsi:type="varchar" comment="Atributo1" length="20"/>
+	</table>
+</schema>
